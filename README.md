@@ -1,2 +1,2 @@
-# brumikbot-by-itswolf-on-server-hah
+# brumikbot-by-brumik-on-server-hah
 Hosting for BrumikBot...

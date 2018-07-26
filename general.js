@@ -281,7 +281,10 @@ if (cmd === `b!coinflip`) {
 
             let sayarray = message.content.slice(args1[0].length)
             if(message.author.id != '395261481001811988') {
-                message.channel.send("Promiň, tento příkaz může použít jen developer bota.");
+              const embedErr = new Discord.RichEmbed()
+              .setTitle("")
+              .setColor("#cc0000")
+              .setDescription("Tuto funkci může použít pouze developer.")
                 return;
               } else {
 

@@ -290,11 +290,6 @@ if (cmd === `b!coinflip`) {
                   embed: {
                     color: 0x00cc7a,
                     description: args1,
-                    timestamp: new Date(),
-                    footer: {
-                      text: ``,
-                      icon_url:
-                    }
                   }
                 })
 

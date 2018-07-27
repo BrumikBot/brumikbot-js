@@ -280,11 +280,8 @@ if (cmd === `b!coinflip`) {
             args1 = message.content.slice(a[0].length+1);
 
             let sayarray = message.content.slice(args1[0].length)
-            if(message.author.id != '575767570989077') {
-              const embedErr = new Discord.RichEmbed()
-              .setTitle("")
-              .setColor("#cc0000")
-              .setDescription("Tuto funkci může použít pouze developer.")
+            if(message.author.id != '395261481001811988') {
+            message.channel.send("Tuto funkci může použít pouze developer Brumík bota.");
                 return;
               } else {
 
@@ -295,8 +292,8 @@ if (cmd === `b!coinflip`) {
                     description: args1,
                     timestamp: new Date(),
                     footer: {
-                      text: `Brumikosaurus#1517`,
-                      icon_url: message.author.avatarURL
+                      text: ``,
+                      icon_url:
                     }
                   }
                 })

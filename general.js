@@ -347,7 +347,7 @@ if (cmd === `b!coinflip`) {
             const embed = new Discord.RichEmbed()
                 .setTitle('Statistiky Brumík bota')
                 .setDescription(`⏱ Uptime: ${hours}h, ${minutes}m`)
-                .setColor(message.guild.me.displayHexColor)
+                .setColor('4da6ff')
                 .addField('<:FeelsArmyMan:454563586619080715> Uživatelé', `${bot.guilds.reduce((mem, g) => mem += g.memberCount, 0)}`, true)
                 .addField('🏘 Servery', `${bot.guilds.size.toLocaleString()}`, true)
                 .addField('<:ram:472788981285650432> Využití RAM', `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`, true)

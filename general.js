@@ -336,6 +336,28 @@ if (cmd === `b!coinflip`) {
                             .setColor(message.guild.me.displayHexColor);
                             message.channel.send(cleanEmbed);
                 }
+ 
+         if (cmd === "b!stats") {
+          let totalSeconds = (client.uptime / 1000);
+          let hours = Math.floor(totalSeconds / 3600);
+          totalSeconds %= 3600;
+          let minutes = Math.floor(totalSeconds / 60);
+          let seconds = totalSeconds % 60;
+            const game = client.user.presence.game || {};
+            const embed = new Discord.RichEmbed()
+                .setTitle('Statistiky Brumík bota')
+                .setDescription(`Uptime: ${hours}h, ${minutes}m`)
+                .setColor(message.guild.me.displayHexColor)
+                .addField('<:FeelsArmyMan:454563586619080715> Uživatelé', `${bot.guilds.reduce((mem, g) => mem += g.memberCount, 0)}`, true)
+                .addField('🏘 Servery', `${bot.guilds.size.toLocaleString()}`, true)
+                .addField('<:ram:472788981285650432> Využití RAM', `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`, true)
+                .addField('💾 Verze', version, true)
+                .addField('🎮 Hra', `${game.name || 'None'} ${game.streaming ? `[(Streaming)](${game.url})` : ''}`, true)
+                .addField('🏓 Ping', `${Math.round(bot.ping)}ms`, true)
+                .setThumbnail(bot.user.avatarURL)
+
+            message.channel.sendEmbed(embed)
+        }
 
 });
 bot.login(process.env.BOT_TOKEN);

@@ -346,7 +346,7 @@ if (cmd === `b!coinflip`) {
             const game = client.user.presence.game || {};
             const embed = new Discord.RichEmbed()
                 .setTitle('Statistiky Brumík bota')
-                .setDescription(`Uptime: ${hours}h, ${minutes}m`)
+                .setDescription(`⏱ Uptime: ${hours}h, ${minutes}m`)
                 .setColor(message.guild.me.displayHexColor)
                 .addField('<:FeelsArmyMan:454563586619080715> Uživatelé', `${bot.guilds.reduce((mem, g) => mem += g.memberCount, 0)}`, true)
                 .addField('🏘 Servery', `${bot.guilds.size.toLocaleString()}`, true)

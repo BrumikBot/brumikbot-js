@@ -338,12 +338,12 @@ if (cmd === `b!coinflip`) {
                 }
  
          if (cmd === "b!stats") {
-          let totalSeconds = (client.uptime / 1000);
+          let totalSeconds = (bot.uptime / 1000);
           let hours = Math.floor(totalSeconds / 3600);
           totalSeconds %= 3600;
           let minutes = Math.floor(totalSeconds / 60);
           let seconds = totalSeconds % 60;
-            const game = client.user.presence.game || {};
+            const game = bot.user.presence.game || {};
             const embed = new Discord.RichEmbed()
                 .setTitle('Statistiky Brumík bota')
                 .setDescription(`⏱ Uptime: ${hours}h, ${minutes}m`)

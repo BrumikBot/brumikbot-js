@@ -22,6 +22,7 @@ bot.on("message", async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
   let logo = "https://brumikosaurus.files.wordpress.com/2018/06/brumik_bot_logo_21.png"
+  let version = '2.0.3'
   let guild = message.guild;
   let args3 = message.content.split(" ");
   a = message.content.split(' ');

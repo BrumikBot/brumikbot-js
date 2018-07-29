@@ -228,11 +228,11 @@ if (cmd === `b!coinflip`) {
               color: 0x00cc7a,
               title: "🎱 Koule která ti odpoví na všechny tvé otázky",
         fields: [{
-                name: "Ptáš se",
+                name: "Ptáš se:",
                 value: args2
               },
               {
-                name: "**Já odpovídám:**",
+                name: "Já odpovídám:",
                 value: odpovedi[Math.floor(Math.random() * odpovedi.length)]
               }
            ],

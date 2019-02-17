@@ -363,12 +363,12 @@ if (cmd === `b!coinflip`) {
 if(cmd === `b!about`){
 
 var about = new Discord.RichEmbed()
-.setAuthor("Kdo nebo co je Brumík bot", "https://cdn.brumikosaurus.cf/Brumik_bot_logo.png")
-.setDescription(`Brumík bot je český bot stavěný pro servery co nepotřebují mnoho funkcí,\ndokáže se postrat o vše co mu řekneš ať už o zábavu, informace či administraci.\nBrumík bot je pouze ve verzi beta avšak už něco umí, stačí si jen vybrat.`)
+.setAuthor("Kdo nebo co je Brumík bot", "https://cdn.brumikosaurus.cf/Brumik_bot.png")
+.setDescription(`Brumík bot je český bot stavěný pro servery co nepotřebují mnoho funkcí,\ndokáže se postrat o vše co mu řekneš ať už o zábavu, informace či administraci.\nBrumík bot toho neumí moc ani málo, stačí si jen vybrat.`)
 .setFooter("Brumík bot by Brumikosaurus")
 .setColor("#ffcc00")
 .setTimestamp()
-.setThumbnail("https://cdn.brumikosaurus.cf/Brumik_bot_logo.png")
+.setThumbnail("https://cdn.brumikosaurus.cf/Brumik_bot.png")
 
             message.channel.sendEmbed(about)
         }

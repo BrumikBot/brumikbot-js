@@ -5,7 +5,7 @@ const config = require('./botconfig.json');
 const bot = new Discord.Client({disableEveryone: true});
 
 bot.on('ready', () => {
-    var playing = ["https://brumikosaurus.cf", `Developed by: Brumikosaurus`, "si v Brumíkově | b!help"]
+    var playing = ["https://brumikosaurus.cf", `Vytvořil: Brumikosaurus`, "si v Brumíkově | b!help"]
     var interval = setInterval(function() {
         var game = Math.floor((Math.random() * playing.length) + 0);
         bot.user.setGame(playing[game])
@@ -21,8 +21,8 @@ bot.on("message", async message => {
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
-  let logo = "https://cdn.brumikosaurus.cf/Brumik_bot_logo.png"
-  let version = '1.8.4_new'
+  let logo = "https://cdn.brumikosaurus.cf/Brumik_bot.png"
+  let version = '1.8.5_new'
   let guild = message.guild;
   let args3 = message.content.split(" ");
   a = message.content.split(' ');
@@ -31,8 +31,8 @@ bot.on("message", async message => {
   if(cmd === `b!help`){
 
   var help = new Discord.RichEmbed()
-  .setAuthor("Help - Nápověda", "https://cdn.brumikosaurus.cf/Brumik_bot_logo.png")
-  .setDescription(`Můj prefix je nastaven na: \`b!\`\n\n<:FeelsLolMan:512678264813256714> | **Zábava**\nPříkazy které mohou použít všichni.\n\n\`b!date\` - Zobrazí informace o dnešku\n\`b!pocasi lokalita\` - Zobrazí aktuální počasí v zadané lokalitě.\n\`b!8ball otázka\` - Odpoví ti na všechny tvé otázky.\n\`b!coinflip\` - Hodí mincí a vybere náhodnou věc.\n\`b!ping\` - Zobrazí aktuální odezvu.\n\`b!userinfo @uživatel\` - Zobrazí informace o uživateli.\n\n<:FeelsGentlemanMan:512682339579461634> | **Administrátor**\nPříkazy které může použít pouze administrátor.\n\n\`b!ban @uživatel\` - Zabanuje uživatele.\n\`b!kick @uživatel\` - Vyhodí uživatele ze serveru.\n\`b!purge počet\` - Smaže zadaný počet zpráv.`)
+  .setAuthor("Help - Nápověda", "https://cdn.brumikosaurus.cf/Brumik_bot.png")
+  .setDescription(`Můj prefix je nastaven na: \`b!\`\n\n🎭 | **Zábava**\nPříkazy které mohou použít všichni.\n\n\`b!date\` - Zobrazí informace o dnešku\n\`b!pocasi lokalita\` - Zobrazí aktuální počasí v zadané lokalitě.\n\`b!8ball otázka\` - Odpoví ti na všechny tvé otázky.\n\`b!coinflip\` - Hodí mincí a vybere náhodnou věc.\n\`b!ping\` - Zobrazí aktuální odezvu.\n\`b!userinfo @uživatel\` - Zobrazí informace o uživateli.\n\n<:FeelsGentleMan:546806709394473010> | **Administrátor**\nPříkazy které může použít pouze administrátor.\n\n\`b!ban @uživatel\` - Zabanuje uživatele.\n\`b!kick @uživatel\` - Vyhodí uživatele ze serveru.\n\`b!purge počet\` - Smaže zadaný počet zpráv.`)
   .setFooter("Brumík bot by Brumikosaurus")
   .setColor("#ffcc00")
   .setTimestamp()
@@ -52,7 +52,7 @@ bot.on("message", async message => {
 
    var ping = new Discord.RichEmbed()
   .setTitle("Ping")
-  .setDescription(`**Moje odezva je momentálně**: ${Math.round(bot.ping)}ms`)
+  .setDescription(`**Momentálně odpovídám rychlostí**: ${Math.round(bot.ping)}ms`)
   .setFooter("Brumík bot by Brumikosaurus")
   .setColor("RANDOM")
   .setTimestamp()
@@ -70,7 +70,7 @@ if(cmd === "b!ban"){
       name: "Chyba",
       icon_url: "http://icons.iconarchive.com/icons/paomedia/small-n-flat/256/sign-error-icon.png"
     },
-    description: "Na tuto akci nemáš oprávnění.",
+    description: "Ahhhh, na tohle nemáš práva.",
     timestamp: new Date(),
   }
 });
@@ -150,7 +150,7 @@ if(cmd === `b!kick`){
       name: "Chyba",
       icon_url: "http://icons.iconarchive.com/icons/paomedia/small-n-flat/256/sign-error-icon.png"
     },
-    description: `Na tuto akci nemáš oprávnění.`,
+    description: `Ahhhh, na tohle nemáš práva.`,
     timestamp: new Date(),
   }
 });
@@ -216,11 +216,11 @@ if (cmd === `b!coinflip`) {
       'Ne',
       'Možná',
       'Nikdy!',
-      'Možná ale nikdo to neví. <:Neveriiiim:512680836399759360>',
-      'Někdy ano ale teď rozhodně ne. <:Herold:512678350616002561>',
+      'Možná ale nikdo to neví. <:Neveriiiim:546805572922769438>',
+      'Někdy ano ale teď rozhodně ne. <:Herold:546805519856304141>',
       'Řekl bych že ano, ale ananas si na pizzu rozhodně nedávej!',
-      'To já nevím, ale myslím si že Mary Jane ti odpoví. <:MaryJane:512678439036256268>',
-      'Vážně? <:Really:512681288327495681> Myslím si že ne. '
+      'To já nevím, ale myslím si že Mary Jane ti odpoví. <:MaryJane:546805453175128064>',
+      'Vážně? <:Really:546805583949332521> Myslím si že ne. '
       ];
 
       message.channel.send({
@@ -250,7 +250,7 @@ if (cmd === `b!coinflip`) {
               const embedErr = new Discord.RichEmbed()
               .setTitle("")
               .setColor("#cc0000")
-              .setDescription("Tento požadavek nelze vykonat, chyba v API nebo chybně zadaná lokace.")
+              .setDescription("Tohle nezvládnu, něco je špatně v API nebo jsi zadal šptnou nebo neexistující lokaci.")
                 if (err) message.channel.sendEmbed(embedErr);
 
              if (result.length === 0) {
@@ -263,7 +263,7 @@ if (cmd === `b!coinflip`) {
 
           const pocasi = new Discord.RichEmbed()
               .setDescription(`**${current.skytext}**`)
-              .setTitle(`Počasí pro ${current.observationpoint} <:pocasi:512678167950000139>`)
+              .setTitle(`Počasí pro ${current.observationpoint} <:pocasi:546804840483782658>`)
               .setThumbnail(current.imageUrl)
               .setColor("#00ffff")
               .addField('Teplota',`${current.temperature} °C`, true)
@@ -282,7 +282,7 @@ if (cmd === `b!coinflip`) {
 
             let sayarray = message.content.slice(args1[0].length)
             if(message.author.id != '395261481001811988') {
-            message.channel.send(":warning: | Tato funkce je dostupná pouze developerovi Brumík bota.");
+            message.channel.send(":warning: | Tato funkce pro tebe není dostupná.");
                 return;
               } else {
 
@@ -318,7 +318,7 @@ if (cmd === `b!coinflip`) {
             		.addField("Připojení na server:", `${moment.utc(member.joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
             		.addField("Bot:", `${user.bot}`, true)
             		.addField("Status:", `${user.presence.status}`, true)
-            		.addField("Hraje:", `${user.presence.game ? user.presence.game.name : 'None'}`, true)
+            		.addField("Hraje:", `${user.presence.game ? user.presence.game.name : 'Spíš nehraje'}`, true)
             		.addField("Role:", member.roles.map(roles => `${roles.name}`).join(', '), true)
             		.setFooter(`Požadavek od: ${message.author.username}#${message.author.discriminator}`)
                  message.channel.send({embed});
@@ -326,13 +326,13 @@ if (cmd === `b!coinflip`) {
 
                 if (cmd === "b!purge") {
                 if (!message.guild.member(bot.user).hasPermission('MANAGE_MESSAGES')) return message.channel.send(':no_entry: | Potřebuji práva `MANAGE_MESSAGES`.').catch(console.error);
-                            if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(":no_entry: | Nemáš práva `MANAGE_MESSAGES` pro tento příkaz.");
-                            if (isNaN(args3[1])) return message.channel.send(':warning: | Musíš uvést počet zpráv, co mám smazat.');
-                            if (args3[1] > 100) return message.channel.send(':warning: | Nelze smazat více jak 100 zpráv.');
+                            if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(":no_entry: | Nemáš práva `MANAGE_MESSAGES` která jsou potřebná pro použití tohoto příkazu.");
+                            if (isNaN(args3[1])) return message.channel.send(':warning: | Nemůžu smazat vzduch, musíš uvést počet zpráv které mám smazat.');
+                            if (args3[1] > 100) return message.channel.send(':warning: | Víc jak 100 zpárv smazat nedokážu.');
                             message.channel.bulkDelete(args3[1]);
                             var cleanEmbed = new Discord.RichEmbed()
                             .setAuthor('Zprávy smazány')
-                            .setDescription(`<:Ano:512683023297282056> | Smazáno **${args3[1]}**. zpráv`)
+                            .setDescription(`<:Ano:546803801638567956> | Smazáno **${args3[1]}**. zpráv`)
                             .setFooter('Smazáno uživatelem ' + message.author.tag, message.author.avatarURL)
                             .setColor(message.guild.me.displayHexColor);
                             message.channel.send(cleanEmbed);
@@ -349,9 +349,9 @@ if (cmd === `b!coinflip`) {
                 .setTitle('Statistiky Brumík bota')
                 .setDescription(`⏱ Uptime: ${hours}h, ${minutes}m`)
                 .setColor('4da6ff')
-                .addField('<:FeelsArmyMan:512684704525451275> Uživatelé', `${bot.guilds.reduce((mem, g) => mem += g.memberCount, 0)}`, true)
+                .addField('<:FeelsArmyMan:546803495529873421> Uživatelé', `${bot.guilds.reduce((mem, g) => mem += g.memberCount, 0)}`, true)
                 .addField('🏘 Servery', `${bot.guilds.size.toLocaleString()}`, true)
-                .addField('<:ram1:512684704319930369> Využití RAM', `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`, true)
+                .addField('<:ram123:546803337937551360> Využití RAM', `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`, true)
                 .addField('💾 Verze', version, true)
                 .addField('🎮 Hra', `${game.name || 'Nic nehraje'} ${game.streaming ? `[(Streaming)](${game.url})` : ''}`, true)
                 .addField('🏓 Odezva', `${Math.round(bot.ping)}ms`, true)

@@ -5,7 +5,7 @@ const config = require('./botconfig.json');
 const bot = new Discord.Client({disableEveryone: true});
 
 bot.on('ready', () => {
-    var playing = ["https://vavrik.cf", `Vytvořil: Ten Lukáš`, "si v Tramvaji | b!help"]
+    var playing = ["http://vavrik.cf", `Vytvořil: Ten Lukáš`, "si v Tramvaji | b!help"]
     var interval = setInterval(function() {
         var game = Math.floor((Math.random() * playing.length) + 0);
         bot.user.setGame(playing[game])

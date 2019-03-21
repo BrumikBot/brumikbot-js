@@ -5,7 +5,7 @@ const config = require('./botconfig.json');
 const bot = new Discord.Client({disableEveryone: true});
 
 bot.on('ready', () => {
-    var playing = ["https://brumikosaurus.cf", `Vytvořil: Brumikosaurus`, "si v Brumíkově | b!help"]
+    var playing = ["https://vavrik.cf", `Vytvořil: Ten Lukáš`, "si v Tramvaji | b!help"]
     var interval = setInterval(function() {
         var game = Math.floor((Math.random() * playing.length) + 0);
         bot.user.setGame(playing[game])
@@ -33,7 +33,7 @@ bot.on("message", async message => {
   var help = new Discord.RichEmbed()
   .setAuthor("Help - Nápověda", "https://cdn.brumikosaurus.cf/Brumik_bot.png")
   .setDescription(`Můj prefix je nastaven na: \`b!\`\n\n :information_source:| **Informace**\nPříkazy které obsahují informace.\n\n\`b!date\` - Zobrazí informace o dnešku\n\`b!pocasi lokalita\` - Zobrazí aktuální počasí v zadané lokalitě.\n\`b!about\` - Řekne ti něco více o Brumík botovi.\n\`b!stats\` - Zobrazí statistiky Brumík bota.\n\`b!ping\` - Zobrazí aktuální odezvu.\n\`b!userinfo @uživatel\` - Zobrazí informace o uživateli.\n\n🎭 | **Zábava**\nPříkazy které tě pobaví.\n\n\`b!8ball otázka\` - Odpoví ti na všechny tvé otázky.\n\`b!coinflip\` - Hodí mincí a vybere náhodnou věc.\n\n<:FeelsGentleMan:546806709394473010> | **Administrátor**\nPříkazy které může použít pouze administrátor.\n\n\`b!ban @uživatel\` - Zabanuje uživatele.\n\`b!kick @uživatel\` - Vyhodí uživatele ze serveru.\n\`b!purge počet\` - Smaže zadaný počet zpráv.`)
-  .setFooter("Brumík bot by Brumikosaurus")
+  .setFooter("Brumík bot by Ten Lukáš")
   .setColor("#ffcc00")
   .setTimestamp()
   .setThumbnail(logo)
@@ -53,7 +53,7 @@ bot.on("message", async message => {
    var ping = new Discord.RichEmbed()
   .setTitle("Ping")
   .setDescription(`**Momentálně odpovídám rychlostí**: ${Math.round(bot.ping)}ms`)
-  .setFooter("Brumík bot by Brumikosaurus")
+  .setFooter("Brumík bot by Ten Lukáš")
   .setColor("RANDOM")
   .setTimestamp()
 
@@ -191,7 +191,7 @@ const embed = new Discord.RichEmbed()
       .setAuthor("Údaje o dnešku", "https://cdn.discordapp.com/attachments/407565034705780736/459426419928334337/ikona_dokument.png")
       .setColor(`RANDOM`)
       .setTimestamp()
-      .setFooter(`Brumík bot by Brumikosaurus`)
+      .setFooter(`Brumík bot by Ten Lukáš`)
 .addField("Dnes je", `\`${Day}\` ,\`${Month}\` ,\`${Year}\`\n\`Time of day:\` \`${today.toString().split(" ")[4]}\``)
 message.channel.send({ embed })
     message.react("🕰")
@@ -365,7 +365,7 @@ if(cmd === `b!about`){
 var about = new Discord.RichEmbed()
 .setAuthor("Kdo nebo co je Brumík bot", "https://cdn.brumikosaurus.cf/Brumik_bot.png")
 .setDescription(`Brumík bot je český bot stavěný pro servery co nepotřebují mnoho funkcí,\ndokáže se postrat o vše co mu řekneš ať už o zábavu, informace či administraci.\nBrumík bot toho neumí moc ani málo, stačí si jen vybrat.`)
-.setFooter("Brumík bot by Brumikosaurus")
+.setFooter("Brumík bot by Ten Lukáš")
 .setColor("#ffcc00")
 .setTimestamp()
 .setThumbnail("https://cdn.brumikosaurus.cf/Brumik_bot.png")

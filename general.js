@@ -256,6 +256,11 @@ if (cmd === `b!coinflip`) {
               message.channel.sendEmbed(embedErr)
               return;
              }
+             
+             if (result === Brno) {
+              message.channel.sendEmbed(embedErr)
+              return;
+             }
 
           var current = result[0].current
           var location = result[0].location

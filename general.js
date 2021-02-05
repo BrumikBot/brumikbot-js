@@ -257,7 +257,7 @@ if (cmd === `b!coinflip`) {
               return;
              }
              
-             if (result === Brno) {
+             if (result.lenght === 4) {
               message.channel.sendEmbed(embedErr)
               return;
              }

@@ -337,6 +337,19 @@ if (cmd === `b!coinflip`) {
                             message.channel.send(cleanEmbed);
                 }
  
+     if (cmd === "b!shutdown") {
+
+            if(message.author.id != '395261481001811988') return message.channel.send(":warning: | Nemáš dostatečná oprávnění.")
+      
+            try {
+             await message.channel.send("<:PepeBan:652907429557698583> | Probíhá vypínání...")
+             process.exit()
+            } catch(e) {
+                message.channel.send(`Chyba: ${e.message}`)
+            }
+     
+     }
+ 
          if (cmd === "b!stats") {
           let totalSeconds = (bot.uptime / 1000);
           let hours = Math.floor(totalSeconds / 3600);

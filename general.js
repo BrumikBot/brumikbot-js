@@ -1,7 +1,7 @@
  const Discord = require('discord.js');
 const weather = require('weather-js');
 const moment = require("moment");
-const config = require('https://github.com/vavriklukas/bot-token/blob/main/botconfig.json');
+const config = require('vavriklukas/bot-token/blob/main/botconfig.json');
 const bot = new Discord.Client({disableEveryone: true});
 
 bot.on('ready', () => {
